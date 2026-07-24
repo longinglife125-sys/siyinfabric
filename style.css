@@ -155,15 +155,29 @@ img {
 }
 
 .hero {
-  background: linear-gradient(110deg, #f4f0ec 0%, #f7faf9 48%, #e2f0ec 100%);
-  padding: 56px 0 46px;
+  background:
+    linear-gradient(90deg, rgba(247, 250, 249, 0.95) 0%, rgba(247, 250, 249, 0.88) 42%, rgba(226, 240, 236, 0.58) 100%),
+    linear-gradient(135deg, #f4f0ec 0%, #f7faf9 48%, #dceee8 100%);
+  padding: 0;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 0.82fr;
-  gap: 38px;
+.hero-banner {
+  min-height: 520px;
+  display: flex;
   align-items: center;
+}
+
+.hero-inner {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  padding: 70px 0;
+}
+
+.hero-copy {
+  width: min(680px, 100%);
 }
 
 .eyebrow {
@@ -183,7 +197,7 @@ h1 {
 }
 
 .hero p {
-  max-width: 650px;
+  max-width: 720px;
   color: #53616b;
   font-size: 18px;
   line-height: 1.7;
@@ -194,6 +208,32 @@ h1 {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+}
+
+.hero-note {
+  width: 330px;
+  min-height: 220px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(223, 229, 234, 0.9);
+  padding: 24px;
+  align-self: stretch;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+
+.hero-note b {
+  display: block;
+  color: #1f272d;
+  font-size: 22px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.hero-note span {
+  color: #65727a;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .btn {
@@ -313,6 +353,18 @@ h1 {
   font-weight: 800;
   text-align: center;
   padding: 22px;
+  line-height: 1.35;
+  flex-direction: column;
+}
+
+.category-image span,
+.product-image span,
+.detail-image span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7d8d88;
+  margin-top: 6px;
 }
 
 .category-body,
@@ -523,11 +575,26 @@ h1 {
     display: none !important;
   }
 
-  .hero-grid,
+  .hero-inner,
   .split,
   .detail-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-inner {
+    display: block;
+    min-height: auto;
+  }
+
+  .hero-banner {
+    min-height: auto;
+  }
+
+  .hero-note {
+    width: 100%;
+    margin-top: 24px;
+    min-height: 150px;
   }
 
   .category-grid,
