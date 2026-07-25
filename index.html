@@ -1,571 +1,299 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neoprene Laminated Fabric & Stretch Fabric Manufacturer | Siyin</title>
+<meta name="description" content="Siyin manufactures neoprene laminated fabric and stretch fabric for OEM/ODM buyers worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-<meta charset="utf-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<title>
-SIYIN Fabric | Neoprene Fabric & Stretch Fabric
-</title>
-
-
-<meta name="description"
-content="SIYIN supplies neoprene fabric and stretch fabric for sportswear, bags and protective products.">
-
-
-<link rel="stylesheet" href="styles.css">
-
+<script>
+// --- i18n scaffold ---------------------------------------------------
+// Only "en" is populated today. To add a language: add a key below with
+// the same data-i18n names, then add an <option> in every .lang-switch.
+const SIYIN_I18N = {
+  en: {} // strings are authored directly in HTML for now; this object
+         // is the hook point for future language packs.
+};
+function setLanguage(code){
+  document.documentElement.setAttribute('lang', code);
+  localStorage_note = code; // placeholder — swap for real string swap once packs exist
+}
+</script>
 
 </head>
-
-
 <body>
 
-
-
-<!-- HEADER -->
-
-<header class="header">
-
-<div class="container nav">
-
-
-<div class="logo">
-SIYIN
-</div>
-
-
-<nav>
-
-<a href="index.html">
-Home
-</a>
-
-<a href="products.html">
-Products
-</a>
-
-<a href="about.html">
-About
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
-
-</nav>
-
-
-</div>
-
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="dot"></span>Siyin</a>
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main" id="mainNav">
+      <a href="index.html" class="active">Home</a>
+      <span class="dropdown">
+        <a href="#" class=" " onclick="return toggleMobileDropdown(event)">Products</a>
+        <div class="dropdown-menu mega mega-full">
+          <div class="mega-col">
+            <a href="neoprene-laminated-fabric.html" class="mega-col-head">
+              <div class="mega-img media-ph"><span class="ph-label" style="font-size:10px;padding:4px 8px;">Photo</span></div>
+              <span class="mega-label">Neoprene Laminated Fabric</span>
+            </a>
+            <a href="neoprene-laminated-fabric.html#water-sports" class="mega-sub">Water Sports &amp; Wetsuits</a>
+            <a href="neoprene-laminated-fabric.html#bags-cases" class="mega-sub">Bags, Cases &amp; Accessories</a>
+            <a href="neoprene-laminated-fabric.html#protective" class="mega-sub">Protective, Medical &amp; Industrial</a>
+          </div>
+          <div class="mega-col">
+            <a href="stretch-fabric.html" class="mega-col-head">
+              <div class="mega-img media-ph"><span class="ph-label" style="font-size:10px;padding:4px 8px;">Photo</span></div>
+              <span class="mega-label">Stretch Fabric</span>
+            </a>
+            <a href="stretch-fabric.html#yoga" class="mega-sub">Yoga &amp; Everyday Activewear</a>
+            <a href="stretch-fabric.html#performance" class="mega-sub">Performance &amp; Compression</a>
+            <a href="stretch-fabric.html#fashion" class="mega-sub">Fashion, Print &amp; Specialty</a>
+          </div>
+        </div>
+      </span>
+      <a href="oem-odm.html" class="">OEM &amp; ODM</a>
+      <a href="blog.html" class="">Blog</a>
+      <a href="about.html" class="">About</a>
+      <a href="contact.html" class="">Contact</a>
+      <span class="lang-switch">
+        <select onchange="setLanguage(this.value)">
+          <option value="en" selected>English</option>
+        </select>
+      </span>
+      <a href="#" class="nav-cta" onclick="openQuickReply();return false;">Get a Quick Reply</a>
+    </nav>
+  </div>
 </header>
-
-
-
-
-
-
-
-<!-- ======================
-TOP AREA
-====================== -->
-
-
-<section class="top-area container">
-
-
-
-
-
-<!-- CERTIFICATIONS -->
-
-
-<aside class="cert-sidebar">
-
-
-<h3>
-CERTIFICATIONS
-</h3>
-
-
-
-<div class="cert-logo">
-
-<img src="images/sgs.png">
-
-</div>
-
-
-
-<div class="cert-logo">
-
-<img src="images/grs.png">
-
-</div>
-
-
-
-<div class="cert-logo">
-
-<img src="images/reach.png">
-
-</div>
-
-
-
-<div class="cert-logo">
-
-<img src="images/oeko.png">
-
-</div>
-
-
-
-</aside>
-
-
-
-
-
-
-
-
-
-<!-- MAIN -->
-
-
-
-<section class="main-home">
-
-
-
-<div class="hero-box">
-
-
-<img src="images/home-banner.jpg"
-alt="Neoprene and Stretch Fabric">
-
-
-
-<div class="hero-content">
-
-
-
-<h1>
-
-Neoprene Fabric
-<br>
-&
-<br>
-Stretch Fabric
-
-</h1>
-
-
-
-<p>
-
-Custom Fabrics For
-
-<br>
-
-Sportswear · Bags · Protective Products
-
-</p>
-
-
-
-
-<a href="products.html"
-class="btn">
-
-Explore Fabrics
-
-</a>
-
-
-
-</div>
-
-
-</div>
-
-
-
+<script>
+function toggleMobileNav(){
+  document.getElementById('mainNav').classList.toggle('open');
+  document.getElementById('menuToggle').classList.toggle('open');
+}
+function toggleMobileDropdown(e){
+  if(window.innerWidth <= 960){
+    e.preventDefault();
+    e.currentTarget.parentNode.classList.toggle('open');
+    return false;
+  }
+}
+</script>
+
+<section class="quick-strip">
+  <div class="wrap">
+    <a href="index.html">Home</a>
+    <a href="neoprene-laminated-fabric.html#water-sports">Wetsuit</a>
+    <a href="neoprene-laminated-fabric.html#bags-cases">Bags</a>
+    <a href="neoprene-laminated-fabric.html#protective">Protective</a>
+    <a href="stretch-fabric.html#yoga">Yoga Wear</a>
+    <a href="stretch-fabric.html#performance">Compression</a>
+    <a href="oem-odm.html">OEM &amp; ODM</a>
+  </div>
 </section>
 
+<div class="wrap three-col">
 
+  <aside class="rail-left">
+    <div class="rail-title">Certified</div>
+    <div class="cert-scroll">
+      <div class="cert-track">
+        <div class="cert-chip"><div class="media-ph cert-icon"><span class="ph-label" style="font-size:9px;padding:3px 6px;">ISO</span></div><span>ISO 9001:2015</span></div>
+        <div class="cert-chip"><div class="media-ph cert-icon"><span class="ph-label" style="font-size:9px;padding:3px 6px;">GRS</span></div><span>GRS 4.0</span></div>
+        <div class="cert-chip"><div class="media-ph cert-icon"><span class="ph-label" style="font-size:9px;padding:3px 6px;">RC</span></div><span>REACH</span></div>
+        <div class="cert-chip"><div class="media-ph cert-icon"><span class="ph-label" style="font-size:9px;padding:3px 6px;">SGS</span></div><span>SGS Tested</span></div>
+        <div class="cert-chip"><div class="media-ph cert-icon"><span class="ph-label" style="font-size:9px;padding:3px 6px;">OT</span></div><span>OEKO-TEX</span></div>
+        <!-- duplicate set for seamless loop -->
+        <div class="cert-chip"><div class="media-ph cert-icon"><span class="ph-label" style="font-size:9px;padding:3px 6px;">ISO</span></div><span>ISO 9001:2015</span></div>
+        <div class="cert-chip"><div class="media-ph cert-icon"><span class="ph-label" style="font-size:9px;padding:3px 6px;">GRS</span></div><span>GRS 4.0</span></div>
+        <div class="cert-chip"><div class="media-ph cert-icon"><span class="ph-label" style="font-size:9px;padding:3px 6px;">RC</span></div><span>REACH</span></div>
+        <div class="cert-chip"><div class="media-ph cert-icon"><span class="ph-label" style="font-size:9px;padding:3px 6px;">SGS</span></div><span>SGS Tested</span></div>
+        <div class="cert-chip"><div class="media-ph cert-icon"><span class="ph-label" style="font-size:9px;padding:3px 6px;">OT</span></div><span>OEKO-TEX</span></div>
+      </div>
+    </div>
+  </aside>
 
+  <div class="col-center">
 
+    <div class="banner-block media-ph">
+      <div class="banner-overlay">
+        <div class="banner-badge">15 Year<br><span>OEM Service</span></div>
+        <h1>Neoprene &amp; Stretch Fabric Manufacturer</h1>
+        <p>Factory-direct fabric for OEM/ODM buyers &mdash; pick a category below.</p>
+        <a href="#" class="btn primary" onclick="openQuickReply();return false;">Get a Quick Reply</a>
+      </div>
+    </div>
 
+    <div class="prod-grid" style="margin-top:24px;">
+      <a href="neoprene-laminated-fabric.html#water-sports" class="prod-tile">
+        <div class="prod-tile-img media-ph"><span class="ph-label">Photo</span></div>
+        <span class="prod-tile-label">Water Sports &amp; Wetsuits</span>
+      </a>
+      <a href="neoprene-laminated-fabric.html#bags-cases" class="prod-tile">
+        <div class="prod-tile-img media-ph"><span class="ph-label">Photo</span></div>
+        <span class="prod-tile-label">Bags, Cases &amp; Accessories</span>
+      </a>
+      <a href="neoprene-laminated-fabric.html#protective" class="prod-tile">
+        <div class="prod-tile-img media-ph"><span class="ph-label">Photo</span></div>
+        <span class="prod-tile-label">Protective &amp; Industrial</span>
+      </a>
+      <a href="stretch-fabric.html#yoga" class="prod-tile">
+        <div class="prod-tile-img media-ph"><span class="ph-label">Photo</span></div>
+        <span class="prod-tile-label">Yoga &amp; Activewear</span>
+      </a>
+      <a href="stretch-fabric.html#performance" class="prod-tile">
+        <div class="prod-tile-img media-ph"><span class="ph-label">Photo</span></div>
+        <span class="prod-tile-label">Performance &amp; Compression</span>
+      </a>
+      <a href="stretch-fabric.html#fashion" class="prod-tile">
+        <div class="prod-tile-img media-ph"><span class="ph-label">Photo</span></div>
+        <span class="prod-tile-label">Fashion, Print &amp; Specialty</span>
+      </a>
+    </div>
 
+    <div style="text-align:center;margin-top:24px;">
+      <a href="oem-odm.html" class="go">Need a finished product instead of fabric? See OEM &amp; ODM &rarr;</a>
+    </div>
 
+  </div>
 
-<!-- CONTACT -->
-
-
-
-<aside class="contact-sidebar">
-
-
-<h3>
-CONTACT
-</h3>
-
-
-
-<h4>
-Jarod
-</h4>
-
-
-<p>
-Sales Manager
-</p>
-
-
-
-<div class="contact-line">
-
-WhatsApp
-
-<br>
-
-+86 189 8871 0018
+  <aside class="rail-right">
+    <div class="contact-card-mini">
+      <div class="rail-title" style="color:#fff;">Talk to Us</div>
+      <a href="https://wa.me/8618307510254" target="_blank" rel="noopener" class="rail-btn whatsapp">&#9742; WhatsApp</a>
+      <a href="mailto:sales@siyinfabric.com" class="rail-btn">&#9993; Email Us</a>
+      <a href="#" onclick="openQuickReply();return false;" class="rail-btn ghost">Get a Quick Reply</a>
+    </div>
+    <a href="#" class="alibaba-entry media-ph">
+      <span class="ph-label">Alibaba store banner — add link &amp; image</span>
+    </a>
+  </aside>
 
 </div>
 
 
-
-
-<div class="contact-line">
-
-Email
-
-<br>
-
-jarod@siyinsport.com
-
-</div>
-
-
-
-
-
-<a href="#" class="quote-btn">
-
-Get Quote
-
-</a>
-
-
-
-
-<a href="#" class="alibaba-link">
-
-Alibaba Store
-
-</a>
-
-
-
-</aside>
-
-
-
+<section>
+  <div class="cta-band">
+    <div class="wrap">
+      <div>
+        <h2>Need a custom fabric solution?</h2>
+        <p>Send us your requirements — application, target spec, or an existing datasheet — and we'll reply with the closest match and a quote.</p>
+      </div>
+      <a href="#" class="btn on-dark" onclick="openQuickReply();return false;">Get Free Quote</a>
+    </div>
+  </div>
 </section>
-
-
-
-
-
-
-
-
-
-<!-- ======================
-CATEGORY
-====================== -->
-
-
-<section class="section">
-
-
-<div class="container">
-
-
-<h2>
-Fabric Categories
-</h2>
-
-
-
-<div class="category-grid">
-
-
-
-
-
-<div class="category-card">
-
-
-<img src="images/neoprene-category.jpg">
-
-
-<h3>
-Neoprene Fabric
-</h3>
-
-
-<p>
-
-SBR · CR · Laminated
-
-</p>
-
-
-
-<span>
-
-Bags · Protective Products · Outdoor
-
-</span>
-
-
-
-<a href="neoprene-fabric.html">
-
-View Collection →
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="category-card">
-
-
-<img src="images/stretch-category.jpg">
-
-
-<h3>
-Stretch Fabric
-</h3>
-
-
-<p>
-
-Nylon Spandex
-
-</p>
-
-
-
-<span>
-
-Yoga Wear · Activewear · Sportswear
-
-</span>
-
-
-
-<a href="stretch-fabric.html">
-
-View Collection →
-
-</a>
-
-
-</div>
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- ======================
-FEATURE PRODUCTS
-====================== -->
-
-
-<section class="section light">
-
-
-<div class="container">
-
-
-<h2>
-Featured Fabrics
-</h2>
-
-
-
-
-<div class="product-grid">
-
-
-
-<div class="product-card">
-
-<img src="images/tie-dye.jpg">
-
-<h4>
-Tie Dye Nylon Spandex
-</h4>
-
-</div>
-
-
-
-
-<div class="product-card">
-
-<img src="images/brushed.jpg">
-
-<h4>
-Brushed Stretch Fabric
-</h4>
-
-</div>
-
-
-
-
-<div class="product-card">
-
-<img src="images/sbr.jpg">
-
-<h4>
-SBR Neoprene Sheet
-</h4>
-
-</div>
-
-
-
-
-<div class="product-card">
-
-<img src="images/laminated.jpg">
-
-<h4>
-Laminated Neoprene
-</h4>
-
-</div>
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-<!-- ======================
-ABOUT
-====================== -->
-
-
-<section class="about-mini">
-
-
-<div class="container">
-
-
-<h2>
-About SIYIN
-</h2>
-
-
-
-<p>
-
-SIYIN focuses on neoprene fabric and stretch fabric,
-providing customized material solutions for global buyers.
-
-</p>
-
-
-
-<a href="about.html">
-
-Learn More →
-
-</a>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
 
 
 <footer>
-
-
-<div class="container">
-
-
-<p>
-
-© SIYIN Fabric
-
-</p>
-
-
-</div>
-
-
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h5>Siyin</h5>
+        <p style="max-width:280px;">Dongguan Siyin Sports Goods Co., Ltd. — neoprene lamination, fabric lamination and foam lamination for OEM/ODM buyers worldwide.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Products</h5>
+        <a href="neoprene-laminated-fabric.html">Neoprene Laminated Fabric</a>
+        <a href="stretch-fabric.html">Stretch Fabric</a>
+        <a href="oem-odm.html">OEM &amp; ODM</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <p>Dongguan, Guangdong, China</p>
+        <a href="mailto:sales@siyinfabric.com">sales@siyinfabric.com</a>
+        <a href="https://wa.me/8618307510254">WhatsApp +86 183 0751 0254</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; Dongguan Siyin Sports Goods Co., Ltd.</span>
+      <span>Neoprene Laminated Fabric &middot; Stretch Fabric</span>
+    </div>
+  </div>
 </footer>
 
+<div class="qr-overlay" id="qrOverlay" onclick="if(event.target===this)closeQuickReply();">
+  <div class="qr-modal">
+    <button class="qr-close" onclick="closeQuickReply()">&times;</button>
+    <h3 id="qrTitle">Get a Quick Reply</h3>
+    <p style="font-size:14px;color:var(--ink-soft);margin:8px 0 20px;">Tell us what you're making — we'll reply with the closest fabric match, usually within a day.</p>
+    <div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
+    <div class="field"><label>Email / WhatsApp</label><input type="text" placeholder="you@company.com"></div>
+    <div class="field"><label>I'm looking for</label>
+      <select id="qrInterest">
+        <option value="neoprene_fabric">Neoprene Laminated Fabric (raw material)</option>
+        <option value="stretch_fabric">Stretch Fabric (raw material)</option>
+        <option value="yoga_apparel">OEM/ODM Yoga &amp; Activewear (finished clothing)</option>
+        <option value="other_finished">Other Finished Product (bottle sleeve, laptop sleeve, etc.)</option>
+        <option value="other">Not sure — need advice</option>
+      </select>
+    </div>
+    <div class="field"><label>Application / Spec</label><textarea id="qrSpec" placeholder="e.g. 3mm CR neoprene for wetsuit knee panels"></textarea></div>
+    <button type="button" class="btn primary" style="width:100%;justify-content:center;" onclick="alert('Demo form — connect to Formspree or your CRM before publishing.')">Send &amp; Get a Quick Reply</button>
+  </div>
+</div>
 
+<div class="qr-overlay" id="pmOverlay" onclick="if(event.target===this)closeProductModal();">
+  <div class="qr-modal" id="pmModal">
+    <button class="qr-close" onclick="closeProductModal()">&times;</button>
+    <div class="label" id="pmId" style="margin-bottom:8px;"></div>
+    <h3 id="pmName"></h3>
+    <div class="pm-gallery">
+      <div class="media-ph pm-main"><span class="ph-label" style="font-size:11px;padding:5px 10px;">Main photo</span></div>
+      <div class="pm-thumbs">
+        <div class="media-ph"><span class="ph-label" style="font-size:10px;padding:4px 8px;">Photo 2</span></div>
+        <div class="media-ph"><span class="ph-label" style="font-size:10px;padding:4px 8px;">Photo 3</span></div>
+        <div class="media-ph"><span class="ph-label" style="font-size:10px;padding:4px 8px;">&#9658; Video</span></div>
+      </div>
+    </div>
+    <table class="info-table" style="margin:18px 0;">
+      <tr><th>Material</th><td id="pmMat"></td></tr>
+      <tr><th>Weight</th><td id="pmGsm"></td></tr>
+      <tr><th>Width</th><td id="pmWidth"></td></tr>
+      <tr><th>Spec Note</th><td id="pmNote"></td></tr>
+      <tr><th>Typical Use</th><td id="pmApp"></td></tr>
+    </table>
+    <p style="font-size:14.5px;color:var(--ink-soft);margin-bottom:14px;" id="pmDesc"></p>
+    <div class="p-tags" id="pmTags" style="margin-bottom:22px;"></div>
+    <p style="font-size:12.5px;color:var(--ink-faint);margin-bottom:16px;">Pricing depends on volume, colour and finish — request a quote and we'll reply with pricing for your quantity.</p>
+    <button type="button" class="btn primary" style="width:100%;justify-content:center;" onclick="closeProductModal();openQuickReply();">Request a Quote for This Fabric</button>
+  </div>
+</div>
 
-
+<a class="helper-bubble whatsapp-bubble" href="https://wa.me/8618307510254?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20your%20neoprene%2Fstretch%20fabric" target="_blank" rel="noopener">
+  <span>&#9742; Chat on WhatsApp</span>
+</a>
+<script>
+function openQuickReply(){document.getElementById('qrOverlay').classList.add('open');}
+function closeQuickReply(){document.getElementById('qrOverlay').classList.remove('open');}
+function openProductModal(el){
+  document.getElementById('pmId').textContent = el.dataset.id;
+  document.getElementById('pmName').textContent = el.dataset.name;
+  document.getElementById('pmMat').textContent = el.dataset.mat;
+  document.getElementById('pmGsm').textContent = el.dataset.gsm;
+  document.getElementById('pmWidth').textContent = el.dataset.width;
+  document.getElementById('pmNote').textContent = el.dataset.note;
+  document.getElementById('pmApp').textContent = (el.dataset.app||'').split('|').join(', ');
+  document.getElementById('pmDesc').textContent = el.dataset.desc;
+  var tagsWrap = document.getElementById('pmTags');
+  tagsWrap.innerHTML = '';
+  el.dataset.tags.split('|').forEach(function(t){
+    var s = document.createElement('span'); s.textContent = t; tagsWrap.appendChild(s);
+  });
+  document.getElementById('pmOverlay').classList.add('open');
+}
+function closeProductModal(){document.getElementById('pmOverlay').classList.remove('open');}
+</script>
 </body>
-
-
 </html>
